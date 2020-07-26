@@ -1,0 +1,15 @@
+#form{
+    border: 2px double black; background-color: skyblue;
+    padding: 5px;  
+}
+#form,
+label {
+  display: block;
+  padding: 5px;
+}
+#form,
+input {
+  padding-left: 10px;
+  position: relative;
+  align-items: center; 
+  }
