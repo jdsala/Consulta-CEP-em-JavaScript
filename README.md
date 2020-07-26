@@ -1,2 +1,2 @@
 "# consulta-CEP"  
-Projeto que Formulario basico que serve para consultar CEP..
+Projeto de Formulario WEB basico que serve para consultar CEP..
