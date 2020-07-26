@@ -15,7 +15,7 @@ function meu_callback(conteudo) {
         document.getElementById('cidade').value=(conteudo.localidade);
         document.getElementById('uf').value=(conteudo.uf);
         document.getElementById('ibge').value=(conteudo.ibge);
-    } //end if.
+    } 
     else {
         //CEP não Encontrado.
         limpa_formulário_cep();
@@ -25,7 +25,7 @@ function meu_callback(conteudo) {
     
 function pesquisacep(valor) {
 
-    //Nova variável "cep" somente com dígitos.
+    //CEP somente com dígitos.
     var cep = valor.replace(/\D/g, '');
 
     //Verifica se campo cep possui valor informado.
@@ -34,10 +34,10 @@ function pesquisacep(valor) {
         //Expressão regular para validar o CEP.
         var validacep = /^[0-9]{8}$/;
 
-        //Valida o formato do CEP.
+        
         if(validacep.test(cep)) {
 
-            //Preenche os campos com "..." enquanto consulta webservice.
+            //Preenche os campos com "..."
             document.getElementById('rua').value="...";
             document.getElementById('bairro').value="...";
             document.getElementById('cidade').value="...";
@@ -53,7 +53,7 @@ function pesquisacep(valor) {
             //Insere script no documento e carrega o conteúdo.
             document.body.appendChild(script);
 
-        } //end if.
+        } 
         else {
             //cep é inválido.
             limpa_formulário_cep();
@@ -61,7 +61,7 @@ function pesquisacep(valor) {
         }
     } //end if.
     else {
-        //cep sem valor, limpa formulário.
+        //limpa formulário.
         limpa_formulário_cep();
     }
 };
